@@ -3,11 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start": "npm run build && wrangler pages dev dist/cloudflare --compatibility-date=2024-11-06 --experimental-local",
+    "build": "ng build && npm run process",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:training-metrics": "node dist/training-metrics/server/server.mjs"
+    "serve:ssr:training-metrics": "node dist/training-metrics/server/server.mjs",
+    "process": "node ./tools/copy-files.mjs && node ./tools/alter-polyfills.mjs",
+    "deploy": "npm run build && wrangler pages deploy dist/cloudflare"
   },
   "private": true,
   "dependencies": {
@@ -29,6 +31,7 @@
     "@angular/cli": "^18.2.11",
     "@angular/compiler-cli": "^18.2.0",
     "@cloudflare/workers-types": "^4.20241106.0",
+    "@miniflare/tre": "^3.0.0-next.13",
     "@types/jasmine": "~5.1.0",
     "@types/node": "^18.18.0",
     "jasmine-core": "~5.2.0",
@@ -38,6 +41,6 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.5.2",
-    "wrangler": "^3.86.0"
+    "wrangler": "^0.0.0-f0e6e15c8"
   }
 }
