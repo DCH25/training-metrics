@@ -33,6 +33,7 @@
                 "glob": "**/*",
                 "input": "public"
               },
+              "src/assets",
               "src/_routes.json"
             ],
             "styles": [
