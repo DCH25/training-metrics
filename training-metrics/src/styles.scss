@@ -1,1 +1,59 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  // Colors
+  --color-primary: #a39fd4;
+  --color-secondary: #322e70;
+  --color-accent: #6a64c4;
+  --color-background: #0b0a14;
+  --text-color: #e4e4f1;
+  --color-background-gradient: linear-gradient(90deg, rgba(11,10,20,1) 0%, rgba(50,46,112,1) 100%);
+
+  // Font Sizes (Major Second Typescale - 1.125)
+  --text-scale-ratio: 1.125;
+  --text-xl: calc(pow(var(--text-scale-ratio), 6) * 1rem);
+  --text-lg: calc(pow(var(--text-scale-ratio), 4) * 1rem);
+  --text-md: calc(pow(var(--text-scale-ratio), 2) * 1rem);
+  --text-sm: calc(pow(var(--text-scale-ratio), 0) * 1rem);
+  --text-xs: calc(pow(var(--text-scale-ratio), -2) * 1rem);
+
+  // Spacing
+  --space-xl: 1.75rem; // 28px
+  --space-lg: 1.5rem;  // 24px
+  --space-md: 1rem;    // 16px
+  --space-sm: 0.5rem;  // 8px
+  --space-xs: 0.25rem; // 4px  
+}
+
+body {
+  margin: 0px;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+/* =====================================================================================================================
+ *  Font Faces
+ * ================================================================================================================== */
+
+@font-face {
+  font-family: 'Poppins';
+  src: 
+    url('assets/fonts/poppins/poppins-regular.woff2') format('truetype'),
+    url('assets/fonts/poppins/poppins-regular.woff') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: 
+    url('assets/fonts/poppins/poppins-medium.woff2') format('truetype'),
+    url('assets/fonts/poppins/poppins-medium.woff') format('truetype');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: 
+    url('assets/fonts/poppins/poppins-light.woff2') format('truetype'),
+    url('assets/fonts/poppins/poppins-light.woff') format('truetype');
+  font-weight: 300;
+}
