@@ -1,11 +1,11 @@
 :root {
   // Colors
-  --color-primary: #a39fd4;
-  --color-secondary: #322e70;
-  --color-accent: #6a64c4;
-  --color-background: #0b0a14;
-  --text-color: #e4e4f1;
-  --color-background-gradient: linear-gradient(90deg, rgba(11,10,20,1) 0%, rgba(50,46,112,1) 100%);
+  --color-primary: #27272a;
+  --color-secondary: #27272a;
+  --color-accent: white;
+  --color-background: black;
+  --text-color: #fafafa99;
+  --text-color-accent: white;
 
   // Font Sizes (Major Second Typescale - 1.125)
   --text-scale-ratio: 1.125;
@@ -25,7 +25,7 @@
 
 body {
   margin: 0px;
-  font-family: 'Poppins';
+  font-family: 'Geist';
   font-size: 1rem;
   color: var(--text-color);
 }
@@ -34,30 +34,17 @@ p, h1, h2, h3 {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 /* =====================================================================================================================
  *  Font Faces
  * ================================================================================================================== */
 
 @font-face {
-  font-family: 'Poppins';
+  font-family: 'Geist';
   src: 
-    url('assets/fonts/poppins/poppins-regular.woff2') format('truetype'),
-    url('assets/fonts/poppins/poppins-regular.woff') format('truetype');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: 
-    url('assets/fonts/poppins/poppins-medium.woff2') format('truetype'),
-    url('assets/fonts/poppins/poppins-medium.woff') format('truetype');
-  font-weight: 500;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: 
-    url('assets/fonts/poppins/poppins-light.woff2') format('truetype'),
-    url('assets/fonts/poppins/poppins-light.woff') format('truetype');
-  font-weight: 300;
+    url('assets/fonts/geist/geist.woff2') format('woff2')
 }
