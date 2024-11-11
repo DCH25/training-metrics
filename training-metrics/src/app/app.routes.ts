@@ -1,24 +1,28 @@
 import { Routes } from '@angular/router';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { MetricsComponent } from './metrics/metrics.component';
-import { ProgramsComponent } from './programs/programs.component';
-import { SettingsComponent } from './settings/settings.component';
 
 export const routes: Routes = [
   {
     path: 'dashboard',
-    component: DashboardComponent,
+    loadComponent: () => 
+      import('./dashboard/dashboard.component')
+        .then(m => m.DashboardComponent),
   },
   {
     path: 'metrics',
-    component: MetricsComponent,
+    loadComponent: () => 
+      import('./metrics/metrics.component')
+        .then(m => m.MetricsComponent),
   },
   {
     path: 'programs',
-    component: ProgramsComponent,
+    loadComponent: () => 
+      import('./programs/programs.component')
+        .then(m => m.ProgramsComponent),
   },
   { 
     path: 'settings',
-    component: SettingsComponent,
+    loadComponent: () => 
+      import('./settings/settings.component')
+        .then(m => m.SettingsComponent),
   },
 ];
