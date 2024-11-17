@@ -30,8 +30,34 @@ body {
   color: var(--text-color);
 }
 
+* {
+  box-sizing: border-box; // inclusive borders and padding
+}
+
+.page {
+  background-color: var(--color-background);
+  min-height: 100vh;
+  padding: var(--space-xl);
+}
+
+/* =====================================================================================================================
+ *  Default Overrides
+ * ================================================================================================================== */
+
 p, h1, h2, h3 {
   margin: 0;
+}
+
+h1 {
+  font-size: var(--text-xl);
+}
+
+h2 {
+  font-size: var(--text-lg);
+}
+
+h3 {
+  font-size: var(--text-md);
 }
 
 a {
