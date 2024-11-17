@@ -1,0 +1,31 @@
+.table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  
+  table {
+    width: 100%;
+    border: 1px solid var(--color-primary);
+    border-radius: 10px;
+  }
+
+  &-header {
+    width: 100%;
+    border-bottom: 1px solid var(--color-primary);
+  }
+
+  &-heading {
+    font-weight: 300;
+  }
+
+  &-title {
+    color: var(--text-color-accent)
+  }
+
+  tr {
+    display: flex;
+    gap: var(--space-xl);
+    padding: var(--space-md);
+    border-radius: 10px;
+  }
+}

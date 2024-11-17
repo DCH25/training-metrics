@@ -1,0 +1,20 @@
+<div class="table">
+  @if (title) {
+    <h3 class="table-title">{{ title }}</h3>
+  }
+  <table>
+    <thead class="table-header">
+      <tr>
+        <ng-content select="[actions]"></ng-content>
+      </tr>
+      <tr>
+        @for (col of columns; track col.field) {
+          <th class="table-heading">{{ col.field }}</th>
+        }
+      </tr>
+    </thead>
+    <tbody>
+      <ng-content select="[body]"></ng-content>
+    </tbody>
+  </table>
+</div>
