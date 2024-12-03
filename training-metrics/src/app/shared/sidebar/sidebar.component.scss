@@ -20,6 +20,15 @@
     margin: 0;
   }
 
+  &-children {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding-left: var(--space-lg);
+    margin-left: var(--space-sm);
+    border-left: 1px solid var(--color-accent)
+  }
+
   &-item {
     display: flex;
     gap: var(--space-sm);

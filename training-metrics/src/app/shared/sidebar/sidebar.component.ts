@@ -9,5 +9,9 @@ import { RouterModule } from '@angular/router';
   styleUrl: './sidebar.component.scss'
 })
 export class SidebarComponent {
+  showLibrary: boolean = true;
 
+  toggleLibrary(): void {
+    this.showLibrary = !this.showLibrary;
+  }
 }

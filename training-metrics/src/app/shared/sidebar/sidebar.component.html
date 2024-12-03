@@ -5,6 +5,22 @@
       <img src="assets/icons/dashboard.svg" alt="Dashboard Navigation Icon">
       <h2>Dashboard</h2>
     </a>
+    <div class="sidebar-item" (click)="toggleLibrary()">
+      <img src="assets/icons/library.svg" alt="Dashboard Navigation Icon">
+      <h2>Library</h2>
+    </div>
+    @if (showLibrary) {
+      <div class="sidebar-children">
+        <a routerLink="/library/exercises" routerLinkActive="active-link" class="sidebar-item">
+          <img src="assets/icons/exercises.svg" alt="Metrics Navigation Icon">
+          <h2>Exercises</h2>
+        </a>
+        <a routerLink="/library/tags" routerLinkActive="active-link" class="sidebar-item">
+          <img src="assets/icons/tags.svg" alt="Metrics Navigation Icon">
+          <h2>Tags</h2>
+        </a>
+      </div>
+    }
     <a routerLink="/metrics" routerLinkActive="active-link" class="sidebar-item">
       <img src="assets/icons/metrics.svg" alt="Metrics Navigation Icon">
       <h2>Metrics</h2>
