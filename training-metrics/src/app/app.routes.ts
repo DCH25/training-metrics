@@ -4,7 +4,7 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     loadComponent: () =>
-      import('./dashboard/dashboard.component').then(
+      import('./pages/dashboard/dashboard.component').then(
         (m) => m.DashboardComponent
       ),
   },
@@ -14,14 +14,14 @@ export const routes: Routes = [
       {
         path: 'exercises',
         loadComponent: () =>
-          import('./library/exercises/exercises.component').then(
+          import('./pages/library/exercises/exercises.component').then(
             (m) => m.ExercisesComponent
           ),
       },
       {
         path: 'tags',
         loadComponent: () =>
-          import('./library/tags/tags.component').then(
+          import('./pages/library/tags/tags.component').then(
             (m) => m.TagsComponent
           ),
       },
@@ -30,17 +30,17 @@ export const routes: Routes = [
   {
     path: 'metrics',
     loadComponent: () =>
-      import('./metrics/metrics.component').then((m) => m.MetricsComponent),
+      import('./pages/metrics/metrics.component').then((m) => m.MetricsComponent),
   },
   {
     path: 'programs',
     loadComponent: () =>
-      import('./programs/programs.component').then((m) => m.ProgramsComponent),
+      import('./pages/programs/programs.component').then((m) => m.ProgramsComponent),
   },
   {
     path: 'settings',
     loadComponent: () =>
-      import('./settings/settings.component').then((m) => m.SettingsComponent),
+      import('./pages/settings/settings.component').then((m) => m.SettingsComponent),
   },
   {
     path: '',

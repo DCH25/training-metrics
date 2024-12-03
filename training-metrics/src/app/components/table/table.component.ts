@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input, InputSignal } from '@angular/core';
 
 export interface Column {
   field: string;
@@ -12,7 +12,7 @@ export interface Column {
   styleUrl: './table.component.scss'
 })
 export class TableComponent {
-  @Input({ required: true }) columns: Column[] = [];
-  @Input() title: string = "";
+  columns = input.required<Column[]>();
+  title = input<string>("");
 
 }

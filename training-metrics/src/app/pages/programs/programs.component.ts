@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { TableComponent, Column } from '../shared/table/table.component';
+import { Column, TableComponent } from '../../components/table/table.component';
+
 
 @Component({
   selector: 'app-programs',
